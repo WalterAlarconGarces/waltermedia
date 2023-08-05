@@ -1,0 +1,22 @@
+default: &default
+
+  adapter: postgresql
+  encoding: unicode
+  password: Euco8785
+  host: localhost
+  username: postgres
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: waltermedia_development
+
+test:
+  <<: *default
+  database: waltermedia_test
+
+production:
+  <<: *default
+  database: waltermedia_production
+  username: waltermedia
+  password: <%= ENV["WALTERMEDIA_DATABASE_PASSWORD"] %>
