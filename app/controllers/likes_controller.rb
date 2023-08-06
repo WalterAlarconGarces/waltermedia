@@ -21,6 +21,7 @@ class LikesController < ApplicationController
 
   # POST /likes or /likes.json
   def create
+    @posts = Post.all
     @like = Like.new(like_params)
 
     respond_to do |format|
@@ -55,6 +56,25 @@ class LikesController < ApplicationController
       format.html { redirect_to likes_url, notice: "Like was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+  def like
+    puts "!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    #puts Like.find(params[:post_id])
+    @Posible_like =  Like.find_by(post_id: params[:post_id])
+    @quantity = @Posible_like[:quantity]
+    puts @quantity
+    @quantity = @quantity +1
+    puts @quantity
+    @Posible_like.update(quantity: @quantity)
+    @Posible_like.save
+    @PostId = @Posible_like[:post_id]
+    @postToUpdate = Post.find(@PostId)
+    @postToUpdate.update(likeness: @quantity)
+    @postToUpdate.save
+    
+    puts "!!!!!!!!!!!!!!!!!!!!!!!!!!"
+   
+    
   end
 
   private
