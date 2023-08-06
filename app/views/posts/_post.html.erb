@@ -4,16 +4,12 @@
   <div class="card-body">
     <h5 class="card-title"><%= post.title %></h5>
     <p class="card-text"><%= post.content %></p>
+    <h3>How many likes? <%= post.likeness %></h3>
+    <%= button_to("Like",give_a_like_path,method: :post,params: { post_id: post.id })%>
+    
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
+ 
+  
 </div>
 
 </div>

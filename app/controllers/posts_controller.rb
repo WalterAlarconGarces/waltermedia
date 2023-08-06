@@ -3,7 +3,8 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @pagy, @posts = pagy(Post.all)
+   
     @likes = Like.all
 
     if params[:query_text].present?
