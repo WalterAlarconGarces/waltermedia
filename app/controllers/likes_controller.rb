@@ -71,7 +71,7 @@ class LikesController < ApplicationController
     @postToUpdate = Post.find(@PostId)
     @postToUpdate.update(likeness: @quantity)
     @postToUpdate.save
-    
+    redirect_to posts_path
     puts "!!!!!!!!!!!!!!!!!!!!!!!!!!"
    
     

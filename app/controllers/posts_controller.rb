@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @pagy, @posts = pagy(Post.all)
+    @pagy, @posts = pagy(Post.all.reverse_order)
    
     @likes = Like.all
 

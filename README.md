@@ -1,24 +1,19 @@
-# README
+# WalterMEDIA
+ This is a new social network app that lets you connect with people who share your interests and passions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Usage
 
-* Ruby version
+1. Sign-up
+2. Post
+3. Give likes
 
-* System dependencies
+## Contributing
 
-* Configuration
+Feel free to contribute to this project.
 
-* Database creation
 
-* Database initialization
+## Créditos
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Este proyecto fue creado por Walter Alarcón Garces como parte de una evaluación del curso de Ruby.
+- [@WalterAlarconGarces](https://github.com/WalterAlarconGarces)
